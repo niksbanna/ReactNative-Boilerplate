@@ -440,5 +440,5 @@ We use [SemVer](http://semver.org/) for versioning:
 ---
 
 <div align="center">
-  <p>Built with ❤️ by <a href="https://github.com/niksbanna">Nikhil Banna</a></p>
+  <p>Built with ❤️ by <a href="https://github.com/niksbanna">Niks Banna</a></p>
 </div>
