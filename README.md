@@ -412,6 +412,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For issues and questions:
 - Open an [issue on GitHub](https://github.com/niksbanna/ReactNative-Boilerplate/issues)
 - Check [documentation](./docs)
+- Review [Known Issues](./docs/KNOWN_ISSUES.md) for common problems and solutions
+
+## ⚠️ Known Issues
+
+See [docs/KNOWN_ISSUES.md](./docs/KNOWN_ISSUES.md) for information about:
+- Security audit warnings (Expo SDK dependencies)
+- Test coverage thresholds
+- CI/CD configuration notes
+- Production readiness checklist
 
 ## 🔄 Versioning
 
