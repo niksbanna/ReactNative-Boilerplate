@@ -22,7 +22,13 @@ export default function RootNavigator() {
         const token = await StorageService.getAccessToken();
 
         if (user && token) {
-          dispatch(setUser(user as any));
+          dispatch(
+            setUser({
+              id: user.id as string,
+              email: user.email as string,
+              name: user.name as string,
+            })
+          );
         } else {
           dispatch(setLoading(false));
         }

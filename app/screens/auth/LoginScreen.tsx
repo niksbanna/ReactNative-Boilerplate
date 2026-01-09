@@ -142,7 +142,7 @@ export default function LoginScreen() {
 
           <View style={styles.footer}>
             <Text variant="body" color={theme.colors.textSecondary}>
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
             </Text>
             <Button
               title="Sign Up"

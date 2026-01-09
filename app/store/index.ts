@@ -8,8 +8,7 @@ export const store = configureStore({
     auth: authReducer,
     [postsApi.reducerPath]: postsApi.reducer,
   },
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(postsApi.middleware),
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(postsApi.middleware),
 });
 
 // Enable refetchOnFocus/refetchOnReconnect behaviors

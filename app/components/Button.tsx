@@ -5,6 +5,8 @@ import {
   StyleSheet,
   ActivityIndicator,
   TouchableOpacityProps,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 
@@ -17,6 +19,7 @@ interface ButtonProps extends Omit<TouchableOpacityProps, 'style'> {
   size?: ButtonSize;
   loading?: boolean;
   fullWidth?: boolean;
+  style?: StyleProp<ViewStyle>;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -27,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   fullWidth = false,
   onPress,
+  style,
   ...props
 }) => {
   const { theme } = useTheme();
@@ -101,6 +105,7 @@ export const Button: React.FC<ButtonProps> = ({
           ...getPadding(),
           width: fullWidth ? '100%' : 'auto',
         },
+        style,
       ]}
     >
       {loading ? (

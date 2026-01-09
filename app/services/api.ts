@@ -1,4 +1,10 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
+import axios, {
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+  AxiosError,
+  InternalAxiosRequestConfig,
+} from 'axios';
 import { StorageService } from './storage';
 
 // Environment configuration
@@ -24,7 +30,7 @@ class ApiClient {
   private setupInterceptors() {
     // Request interceptor
     this.client.interceptors.request.use(
-      async (config: AxiosRequestConfig) => {
+      async (config: InternalAxiosRequestConfig) => {
         // Log requests in development
         if (IS_DEV) {
           console.log('🚀 Request:', {
@@ -75,7 +81,9 @@ class ApiClient {
 
         // Handle 401 Unauthorized - Token refresh
         if (error.response?.status === 401) {
-          const originalRequest = error.config as AxiosRequestConfig & { _retry?: boolean };
+          const originalRequest = error.config as InternalAxiosRequestConfig & {
+            _retry?: boolean;
+          };
 
           // Avoid infinite loop
           if (!originalRequest._retry) {

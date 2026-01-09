@@ -14,7 +14,7 @@ describe('Button', () => {
   });
 
   it('renders loading state', () => {
-    const { getByTestId, queryByText } = renderWithTheme(
+    const { queryByText } = renderWithTheme(
       <Button title="Test Button" loading onPress={() => {}} />
     );
     expect(queryByText('Test Button')).toBeNull();

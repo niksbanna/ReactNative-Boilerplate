@@ -58,12 +58,7 @@ export default function ProfileScreen() {
         </Text>
       </Card>
 
-      <Button
-        title="Logout"
-        variant="outline"
-        onPress={handleLogout}
-        fullWidth
-      />
+      <Button title="Logout" variant="outline" onPress={handleLogout} fullWidth />
     </ScrollView>
   );
 }

@@ -1,21 +1,16 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  FlatList,
-  ActivityIndicator,
-  RefreshControl,
-} from 'react-native';
+import { View, StyleSheet, FlatList, ActivityIndicator, RefreshControl } from 'react-native';
 import { useTheme } from '../../theme/ThemeContext';
 import { Text, Card } from '../../components';
 import { useGetPostsQuery } from '../../store/services/posts';
+
+import { Post } from '../../store/services/posts';
 
 export default function HomeScreen() {
   const { theme } = useTheme();
   const { data: posts, isLoading, error, refetch } = useGetPostsQuery();
 
-  const renderPost = ({ item }: { item: any }) => (
+  const renderPost = ({ item }: { item: Post }) => (
     <Card elevated style={{ marginBottom: theme.spacing.md }}>
       <Text variant="h3" style={{ marginBottom: theme.spacing.xs }}>
         {item.title}
@@ -48,9 +43,7 @@ export default function HomeScreen() {
           styles.listContent,
           { paddingHorizontal: theme.spacing.md, paddingTop: theme.spacing.md },
         ]}
-        refreshControl={
-          <RefreshControl refreshing={isLoading} onRefresh={refetch} />
-        }
+        refreshControl={<RefreshControl refreshing={isLoading} onRefresh={refetch} />}
         ListEmptyComponent={
           isLoading ? (
             <View style={styles.centerContent}>

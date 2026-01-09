@@ -14,10 +14,7 @@ const forgotPasswordSchema = z.object({
 });
 
 type ForgotPasswordFormData = z.infer<typeof forgotPasswordSchema>;
-type ForgotPasswordNavigationProp = NativeStackNavigationProp<
-  AuthStackParamList,
-  'ForgotPassword'
->;
+type ForgotPasswordNavigationProp = NativeStackNavigationProp<AuthStackParamList, 'ForgotPassword'>;
 
 export default function ForgotPasswordScreen() {
   const { theme } = useTheme();
@@ -68,13 +65,9 @@ export default function ForgotPasswordScreen() {
             color={theme.colors.textSecondary}
             style={{ marginBottom: theme.spacing.xl }}
           >
-            We've sent password reset instructions to your email address.
+            We&apos;ve sent password reset instructions to your email address.
           </Text>
-          <Button
-            title="Back to Login"
-            onPress={() => navigation.navigate('Login')}
-            fullWidth
-          />
+          <Button title="Back to Login" onPress={() => navigation.navigate('Login')} fullWidth />
         </View>
       </View>
     );
@@ -100,7 +93,7 @@ export default function ForgotPasswordScreen() {
             color={theme.colors.textSecondary}
             style={{ marginBottom: theme.spacing.xl }}
           >
-            Enter your email address and we'll send you instructions to reset your password.
+            Enter your email address and we&apos;ll send you instructions to reset your password.
           </Text>
 
           <Controller
