@@ -1,0 +1,43 @@
+node_modules/
+.expo/
+.expo-shared/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+android/app/build/
+ios/build/
+*.apk
+*.ipa
+*.aab
+
+# Temporary files
+*.tmp
+.cache/
