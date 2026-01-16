@@ -46,7 +46,7 @@
     "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.23.6",
     "@babel/preset-typescript": "^7.23.3",
-    "@react-native/eslint-config": "^0.73.1",
+    "@react-native/eslint-config": "^0.83.1",
     "@react-native/metro-config": "^0.73.3",
     "@storybook/react": "^7.6.6",
     "@storybook/react-native": "^7.6.0",
